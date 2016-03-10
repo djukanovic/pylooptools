@@ -1,0 +1,12 @@
+*** looptools/src/makefile 2016-03-10 17:43:04.000000000 +0100
+--- looptools/src/makefile	2016-03-10 17:43:35.000000000 +0100
+***************
+*** 241,246 ****
+--- 241,247 ----
+  
+  $(LIB): $(OBJS)
+  	$(AR) cru $(LIB) $?
++		$(XFC) -shared $(OBJS) -o looptools.so
+  	-$(RANLIB) $(LIB)
+  
+  
