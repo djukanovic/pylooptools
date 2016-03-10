@@ -45,7 +45,7 @@ cc1222=61
 cc2222=64
 
 
-DLL_NAME=++SHAREDLIBNAME++
+DLL_NAME=SHAREDLIBNAME
  
 libtest=ctypes.cdll.LoadLibrary(DLL_NAME)
 c_int_p = POINTER(c_int)

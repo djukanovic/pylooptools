@@ -19,9 +19,9 @@ def main(arg1):
         fl=os.popen('find '+arg1+ ' -name looptools.so').readlines()
 	arch=platform.system()
 	if arch == 'Darwin':
-		os.system('sed -i \'\' \'s~\+\+SHAREDLIBNAME\+\+~"'+fl[0].rstrip('\n')+'"~g\' '+ arg1+'/../ltools.py')
+		os.system('sed -i \'\' \'s~SHAREDLIBNAME~"'+fl[0].rstrip('\n')+'"~g\' '+ arg1+'/../ltools.py')
 	if arch == 'Linux':
-		os.system('sed -i  \'s~\+\+SHAREDLIBNAME\+\+~"'+fl[0].rstrip('\n')+'"~g\' '+ arg1+'/../ltools.py')
+		os.system('sed -i  \'s~SHAREDLIBNAME~"'+fl[0].rstrip('\n')+'"~g\' '+ arg1+'/../ltools.py')
 
 if __name__ == "__main__":
 	main(sys.argv[1])
